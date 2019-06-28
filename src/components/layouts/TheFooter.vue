@@ -9,7 +9,7 @@
 
           <div class="text-md">
 						<!-- 样式对象绑定到 style -->
-            <a v-for="item in contacts" :title="item.title" :href="item.link" :style="contactStyle" target="_blank">
+            <a v-for="item in contacts" v-title="item.title" :href="item.link" :style="contactStyle" target="_blank">
               <i :class="`fa fa-${item.icon}`"></i>
             </a>
           </div>
@@ -29,7 +29,7 @@
               <ul class="list-unstyled">
                 <li v-for="item in sponsor.list">
                   <a :href="item.link" target="_blank">
-                    <img :title="item.title" :src="item.logo" :alt="item.title" class="footer-sponsor-link" width="98">
+                    <img v-title="item.title" :src="item.logo" :alt="item.title" class="footer-sponsor-link" width="98">
                   </a>
                 </li>
               </ul>
@@ -67,8 +67,17 @@
 </template>
 
 <script>
+	
+// 引入 title.js 的默认值
+import title from '@/directives/title'	
+	
 export default {
   name: 'TheFooter',
+  // 添加 directives 选项，并注册 title
+	// directives 选项是一个包含用到指令的对象
+  directives: {
+    title
+  },	
   data() {
     return {
       description: 'VuejsCaff 是一个 Vue.js 的知识社区',
