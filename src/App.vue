@@ -2,6 +2,8 @@
   <div id="wrap">
 		<!-- 等同于 <the-header></the-header> -->
     <TheHeader/>
+		
+		<TheFooter/>
   </div>
 </template>
 
@@ -9,12 +11,15 @@
 	// 在使用 import 引入模块时，我们使用了 @ 符号，该别名指向的是 src 目录，
 	// 你可以从 webpack 配置文件 build/webpack.base.conf.js 找到其定义
 	import TheHeader from '@/components/layouts/TheHeader'
+	import TheFooter from '@/components/layouts/TheFooter'
 
 	export default {
 		name: 'App',
 		components: {
 			// 进行局部注册
-			TheHeader
+			TheHeader,
+			TheFooter
+			
 		}
 	}
 </script>
