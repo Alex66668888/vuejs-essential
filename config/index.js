@@ -43,7 +43,12 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+	
+    // assetsPublicPath: '/',
+	// 我们需要从 dist 目录下的 index.html 文件开始访问项目，但是它不在项目的根目录，
+	// 为了使用 GitHub Pages，我们需要手动指定资源路径为 '/vuejs-essential/dist/'，
+	// 以正确地引用静态资源
+	assetsPublicPath: '/vuejs-essential/dist/',
 
     /**
      * Source Maps
