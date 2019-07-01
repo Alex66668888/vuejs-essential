@@ -11,13 +11,13 @@
 					<span class="icon-bar"></span>
 				</button>				
 				
-				<a href="/" class="navbar-brand">
+				<router-link to="/" class="navbar-brand">
 					<!--  使用 Mustache 语法 （双大括号）进行数据绑定 -->
 					<span class="title">{{ logo.title }}</span>
 					
 					<!-- src 和 alt 都是 HTML 特性，不能使用 Mustache 语法，而要使用 v-bind 指令，:src 是 v-bind:src 的缩写 -->
 					<img :src="logo.src" :alt="logo.title" />
-				</a>
+				</router-link>
 				
 			</div>
 			

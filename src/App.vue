@@ -3,6 +3,12 @@
 		<!-- 等同于 <the-header></the-header> -->
     <TheHeader/>
 		
+		<!-- <router-view> 是一个功能组件，它会渲染路径匹配到的视图组件。
+		* 添加 <div id="main-container"> 元素，是为了保持样式一致 -->
+    <div id="main-container" class="container main-container">
+      <router-view/>
+    </div>		
+		
 		<TheFooter/>
   </div>
 </template>
