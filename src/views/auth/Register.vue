@@ -86,7 +86,7 @@ export default {
 		submit() {
 			// 检查验证码是否匹配
 			if (this.captcha.toUpperCase() !== this.localCaptcha) {
-				alert('验证码不正确')
+				this.showMsg('验证码不正确')
 				// 重新获取验证码
 				this.getCaptcha()
 			} else {
@@ -103,7 +103,7 @@ export default {
 				if (localUser) {
 					// 检查是否重名
 					if (localUser.name === user.name) {
-						alert('用户名已存在')
+						this.showMsg('用户名已存在')
 					} else {
 						this.login(user)
 					}
