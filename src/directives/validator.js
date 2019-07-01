@@ -71,7 +71,7 @@ export default {
 		// 使用解构赋值声明 value = binding.value,  arg = binding.arg,  modifiers = binding.modifiers 
     const { value, arg, modifiers } = binding
 		// 如果没传对应的事件名称参数，就默认使用 change 事件
-    const eventType = ['change', 'blur', 'input'].indexOf(arg) !== -1 ? arg : 'change',
+    const eventType = ['change', 'blur', 'input'].indexOf(arg) !== -1 ? arg : 'change'
 		// 默认处理器，当用户开始输入时，移除错误提示
     const defaultHandler = () => {
       showError(el)
