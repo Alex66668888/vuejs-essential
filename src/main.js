@@ -9,6 +9,8 @@ import App from './App'
 import router from './router'
 // 我们通过引入 ./directives/index.js，运行其中的代码，就可以使用其内部注册的所有指令了
 import './directives'
+// 我们通过引入 ./components/index.js，执行其中代码，就可以使用其内部注册的所有组件了。
+import './components'
 
 // 设置 false 以防止 Vue 在启动时生成生产提示
 Vue.config.productionTip = false
